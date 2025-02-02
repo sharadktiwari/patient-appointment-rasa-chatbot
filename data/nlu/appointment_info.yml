@@ -1,0 +1,127 @@
+version: "3.1"
+nlu:
+
+# - regex: url
+#   examples: |
+#     - [(http(s)?):\/\/(www\.)?a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)
+#     - ^(http://[^\s]+)+.pdf
+#     - ^(http://[^\s]+)+.docx
+#     - ^(http://[^\s]+)+.docs
+
+- regex: time
+  examples: |
+    - [0-9]{2}-[0-9]{2}
+
+- regex: date
+  examples: |
+    - [0-9]{2}/[0-9]{2}/[0-9]{2,4}
+
+
+- intent: appointment_info
+  examples: |
+    - On [10/10/2020](date)
+    - [15/08/2022](date)
+    - on [25/09/2023](date)
+    - [19/05/2000](date)
+    - On [20/01/1999](date)
+    - [11/02/1875](date)
+    - [31/12/1991](date)
+    - between [10-12](time)
+    - Between [12-14](time)
+    - [14-16](time)
+    - [16-20](time)
+    - [10-12](time)
+    - [12-14](time)
+    - [08-10](time)
+    - [18-20](time)
+
+
+- intent: make_appointment
+  examples: |
+    - I need to make an appointment with Dr.
+    - I need to schedule a consultation with Dr.
+    - I need to see a dr.
+    - I need to make an appointment with Doctor.
+    - I need to schedule a consultation with doctor.
+    - I need to see a Doctor.
+    - I need to make an appointment
+    - i want to make an appointment
+    - make appointment
+    - make an appointment for me
+    - Can I connect with him/her again for a follow up?
+    - Can I schedule more than one appointment with a single doctor .
+    - Can I make the schedule an online appointment and pay later on ?
+    - Can I make an online booking with my credit card for somebody else ?
+    - How would the patient book the appointment?
+    - Will I get any alert before the appointment as a reminder?
+    - Can I book the appointments for patients myself?
+    - Can my coordinator book appointments on my behalf?
+    - I want to book an appointment
+    - I need to see a doctor.
+    - i want an appointment
+    - I need an appointment
+    - can I have a booking.
+    - book an appointment
+    - booking
+    - appointment
+    - please book appointment
+    - an appointment
+    - Need to schedule an appointment
+    - schedule appointment
+    - please schedule a meeting with doctor.
+    - make schedule meeting with doctor.
+    - i want to meet doctor.
+    - could you assign meeting with doctor.
+    - i need a consultant.
+    - book an appt
+    - I'd like to setup consultation with doctor
+    - can you request consultation with doctor
+    - could you please request appointment with doc
+    - could you please schedule an appointment with doc.
+    - can you book meeting with doct.
+    - please set up an consultation with doctor
+    - I'd like to setup an apt. with doctor
+    - set up my slot on tomarrow
+
+
+- intent: show_appointment
+  examples: |
+    - Can you show my appointments.
+    - Please show my appointments.
+    - Please show my appointments.
+    - Show my appointments with Doctor.
+    - Show my appointments associated with Doctor.
+    - I want to check my appointments.
+    - Cross check my appointment.
+    
+
+- intent: fill_patient_history
+  examples: |
+    - fill patient details.
+    - I want to fill patient details.
+    - open patient details portal for me.
+    - open patient details form for me.
+    - open patient details form.
+    - lets fill patient details.
+
+
+- intent: reschedule_appointment
+  examples: |
+    - i want to reschedule appointment
+    - i want to reschedule appointment with doctor
+    - I want to modify my appointment
+    - modify my meeting with the doctor
+    - reschedule my meeting with the doctor
+    - i want to change the date and time of my doctor meeting
+    - please change appointment
+    - i want to cancel appointment
+    - i want to cancel appointment with doctor
+    - I want to cancel my appointment
+    - I missed my appointment. What should I do now?  
+    - Can I reschedule an online appointment.
+    - What are the time restrictions for Rescheduling an appointment?
+    - How many reschedulement can be done and what are the conditions for the same?
+    - What is reschedulement fees ?
+    - Are the time slots same as existing or can I modify?
+    - What is the process of creating and blocking of slots?
+    - What do I do if I have to cancel the appointments owing to any emergency?

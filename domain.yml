@@ -1,0 +1,494 @@
+version: '3.1'
+session_config:
+  session_expiration_time: 10
+  carry_over_slots_to_new_session: false
+intents:
+- affirm
+- appointment_info
+- bot_challenge
+- current_medications
+- deny
+- duration_of_illness
+- fill_patient_history
+- goodbye
+- greet
+- make_appointment
+- nc_diseases
+- out_of_scope
+- pass_over
+- reminder_resume_bot
+- reminder_terminate
+- reschedule_appointment
+- symptoms_developed
+- user_info
+- wellbeing_not_well
+- wellbeing_well
+- show_appointment
+- restart_bot
+entities:
+- contact
+- symptoms
+- ncd
+- medication
+- name
+- duration
+- time
+- date
+- gender
+- skip
+slots:
+  dr_contact:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: contact
+      intent: user_info
+      conditions:
+      - active_loop: null
+  clinic_location:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_text
+      not_intent: 
+      - goodbye
+      - restart_bot
+      conditions:
+      - active_loop: user_appointment_form
+        requested_slot: clinic_location
+  visit_type:
+    type: text
+    mappings:
+    - type: from_text
+      not_intent: 
+      - goodbye
+      - restart_bot
+      conditions:
+      - active_loop: user_appointment_form
+        requested_slot: visit_type
+  patient_id:
+    type: text
+    mappings:
+    - type: from_text
+      not_intent:
+      - affirm
+      - appointment_info
+      - bot_challenge
+      - deny
+      - goodbye
+      - greet
+      - make_appointment
+      - out_of_scope
+      - reminder_resume_bot
+      - reminder_terminate
+      - reschedule_appointment
+      - symptoms_developed
+      - user_info
+      - wellbeing_not_well
+      - wellbeing_well
+      - duration_of_illness
+      - current_medications
+      - nc_diseases
+      - pass_over
+      - fill_patient_history
+      - restart_bot
+  visit_id:
+    type: text
+    mappings:
+    - type: from_text
+      not_intent:
+      - affirm
+      - appointment_info
+      - bot_challenge
+      - deny
+      - goodbye
+      - greet
+      - make_appointment
+      - out_of_scope
+      - reminder_resume_bot
+      - reminder_terminate
+      - reschedule_appointment
+      - symptoms_developed
+      - user_info
+      - wellbeing_not_well
+      - wellbeing_well
+      - duration_of_illness
+      - current_medications
+      - nc_diseases
+      - pass_over
+      - fill_patient_history
+      - restart_bot
+  detected_symptoms:
+    type: list
+    mappings:
+    - type: from_text
+      not_intent:
+      - affirm
+      - appointment_info
+      - bot_challenge
+      - deny
+      - goodbye
+      - greet
+      - make_appointment
+      - out_of_scope
+      - reminder_resume_bot
+      - reminder_terminate
+      - reschedule_appointment
+      - symptoms_developed
+      - user_info
+      - wellbeing_not_well
+      - wellbeing_well
+      - duration_of_illness
+      - current_medications
+      - nc_diseases
+      - pass_over
+      - fill_patient_history
+      - restart_bot
+  detected_medications:
+    type: list
+    mappings:
+    - type: from_text
+      not_intent:
+      - affirm
+      - appointment_info
+      - bot_challenge
+      - deny
+      - goodbye
+      - greet
+      - make_appointment
+      - out_of_scope
+      - reminder_resume_bot
+      - reminder_terminate
+      - reschedule_appointment
+      - symptoms_developed
+      - user_info
+      - wellbeing_not_well
+      - wellbeing_well
+      - duration_of_illness
+      - current_medications
+      - nc_diseases
+      - pass_over
+      - fill_patient_history
+      - restart_bot
+  appointment_date:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: date
+      intent: appointment_info
+      not_intent: 
+      - goodbye
+      - restart_bot
+      conditions:
+      - active_loop: user_appointment_form
+        requested_slot: appointment_date
+      - active_loop: reschedule_appointment_form
+        requested_slot: appointment_date
+  appointment_time:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: time
+      intent: appointment_info
+      not_intent: 
+      - goodbye
+      - restart_bot
+      conditions:
+      - active_loop: user_appointment_form
+        requested_slot: appointment_time
+      - active_loop: reschedule_appointment_form
+        requested_slot: appointment_time
+  name:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: name
+      intent:
+      - user_info
+      not_intent: 
+      - goodbye
+      - restart_bot
+      conditions:
+      - active_loop: user_appointment_form
+        requested_slot: name
+  dob:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: date
+      intent: appointment_info
+      not_intent: 
+      - goodbye
+      - restart_bot
+      conditions:
+      - active_loop: user_appointment_form
+        requested_slot: dob
+  gender:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: gender
+      intent: user_info
+      not_intent: 
+      - goodbye
+      - restart_bot
+      conditions:
+      - active_loop: user_appointment_form
+        requested_slot: gender
+  contact:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: contact
+      intent: user_info
+      not_intent: 
+      - goodbye
+      - restart_bot
+      conditions:
+      - active_loop: user_appointment_form
+        requested_slot: contact
+      - active_loop: reschedule_appointment_form
+        requested_slot: contact
+      - active_loop: show_appointment_form
+        requested_slot: contact
+  appointment_symptoms:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_text
+      intent:
+      - symptoms_developed
+      - pass_over
+      conditions:
+      - active_loop: patient_history_form
+        requested_slot: appointment_symptoms
+  illness_duration:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: duration
+      intent: duration_of_illness
+      conditions:
+      - active_loop: patient_history_form
+        requested_slot: illness_duration
+    - type: from_entity
+      entity: skip
+      intent: pass_over
+      conditions:
+      - active_loop: patient_history_form
+        requested_slot: illness_duration
+  medications:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_text
+      intent:
+      - current_medications
+      - pass_over
+      conditions:
+      - active_loop: patient_history_form
+        requested_slot: medications
+  ncdiseases:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: ncd
+      intent: nc_diseases
+      conditions:
+      - active_loop: patient_history_form
+        requested_slot: ncdiseases
+    - type: from_entity
+      entity: skip
+      intent: pass_over
+      conditions:
+      - active_loop: patient_history_form
+        requested_slot: ncdiseases
+  fill_patient_history:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_text
+      not_intent: goodbye
+      conditions:
+      - active_loop: patient_history_form
+        requested_slot: fill_patient_history
+  appointment_status:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_text
+      not_intent: 
+      - goodbye
+      - restart_bot
+      conditions:
+      - active_loop: reschedule_appointment_form
+        requested_slot: appointment_status
+  selected_appointment:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_text
+      not_intent: 
+      - goodbye
+      - restart_bot
+      conditions:
+      - active_loop: reschedule_appointment_form
+        requested_slot: selected_appointment
+      - active_loop: show_appointment_form
+        requested_slot: selected_appointment
+responses:
+  utter_greet:
+  - buttons:
+    - payload: /restart_bot
+      title: Restart
+    text: Namaste, you are already using one of our services. Please complete it or restart.
+  utter_goodbye:
+    - text: Dhanyawaad 🙏🏼 Wish you good health !
+  utter_ask_name:
+  - buttons:
+    - payload: /restart_bot
+      title: Restart
+    text: Please Enter Patient's name :-
+  utter_ask_contact:
+  - buttons:
+    - payload: /restart_bot
+      title: Restart
+    text: Please enter contact number 📱 :-
+  utter_ask_dob:
+  - buttons:
+    - payload: /restart_bot
+      title: Restart
+    text: Please enter Date of Birth [DD/MM/YYYY] :-
+  utter_ask_gender:
+  - buttons:
+    - payload: /user_info{{"gender":"male"}}
+      title: Male
+    - payload: /user_info{{"gender":"female"}}
+      title: Female
+    - payload: /user_info{{"gender":"other"}}
+      title: Others
+    - payload: /restart_bot
+      title: Restart
+    text: Please select Gender :-
+  utter_ask_appointment_status:
+  - buttons:
+    - payload: Rescheduled
+      title: Reschedule Appointment
+    - payload: Canceled
+      title: Cancel Appointment
+    - payload: /restart_bot
+      title: Restart
+    text: Please select operation :-
+  utter_ask_visit_type:
+  - buttons:
+    - payload: new_patient
+      title: New Patient
+    - payload: follow_up
+      title: Follow Up
+    - payload: /restart_bot
+      title: Restart
+    text: Please select the visit type :-
+  utter_ask_fill_patient_history:
+  - buttons:
+    - payload: yes
+      title: Sure, let me share the details
+    - payload: no
+      title: Sorry, I don't want to share
+    text: Can you share the patient's current medical condition [ this will help Doctor treat you better] ?
+  utter_ask_appointment_symptoms:
+  - buttons:
+    - payload: skip
+      title: No Thanks!
+    text: Could you please tell me, how is patient feeling today ? [pain, nausea, headache,...]
+  utter_ask_illness_duration:
+  - buttons:
+    - payload: /pass_over{{"skip":"skip"}}
+      title: No Thanks!
+    text: From how long is patient experiencing these symptoms [2 days or 1 month or...]:-
+  utter_ask_ncdiseases:
+  - buttons:
+    - payload: /nc_diseases{{"ncd":"cardiovascular disease"}}
+      title: CardioVascular Disease [B.P, Stroke,..]
+    - payload: /nc_diseases{{"ncd":"cancer"}}
+      title: Cancer
+    - payload: /nc_diseases{{"ncd":"diabetes"}}
+      title: Diabetes
+    - payload: /nc_diseases{{"ncd":"mental health conditions"}}
+      title: Neurological Conditions / Disorders
+    - payload: /nc_diseases{{"ncd":"chronic respiratory diseases"}}
+      title: Chronic Respiratory Disease [Asthama, COPD,...]
+    - payload: /pass_over{{"skip":"skip"}}
+      title: None
+    text: Please select applicable non-communicable disease :-
+  utter_ask_medications:
+  - buttons:
+    - payload: skip
+      title: Skip
+    text: Please enter prescribed medication [Ecosprin, Rotacaps, Telmika, Insulin]
+  utter_cheer_up:
+  - image: 
+    text: (Here is something to cheer you up 🤗:)
+actions:
+- utter_goodbye
+- action_user_appointment
+- action_greet
+- action_reschedule_appointment
+- action_patient_history
+- action_ask_appointment_date
+- action_ask_appointment_time
+- action_ask_selected_appointment
+- action_ask_clinic_location
+- action_deactivate_loop
+- action_restart
+- action_iamabot
+- action_out_of_scope
+- action_react_to_reminder_resume_bot
+- action_react_to_set_reminder_terminate_session
+- action_sending_medical_help
+- action_set_reminder_terminate_session
+- utter_cheer_up
+- validate_reschedule_appointment_form
+- validate_patient_history_form
+- validate_user_appointment_form
+- action_wellbeing_well
+- action_wellbeing_not_well
+- action_show_appointment
+- validate_show_appointment_form
+forms:
+  user_appointment_form:
+    required_slots:
+    - clinic_location
+    - visit_type
+    - appointment_date
+    - appointment_time
+    - name
+    - contact
+    - dob
+    - gender
+  patient_history_form:
+    required_slots:
+    - fill_patient_history
+    - appointment_symptoms
+    - illness_duration
+    - ncdiseases
+    - medications
+  reschedule_appointment_form:
+    required_slots:
+    - contact
+    - selected_appointment
+    - appointment_status
+    - appointment_date
+    - appointment_time
+  show_appointment_form:
+    required_slots:
+    - contact
+    - selected_appointment

@@ -1,0 +1,451 @@
+
+version: "3.1"
+stories:
+- story: interactive_story_1
+  steps:
+  - intent: user_info
+    entities:
+    - contact: '8269673369'
+  - slot_was_set:
+    - dr_contact: '8269673369'
+  - action: action_greet
+  - intent: make_appointment
+  - action: user_appointment_form
+  - active_loop: user_appointment_form
+  - slot_was_set:
+    - requested_slot: clinic_location
+  - slot_was_set:
+    - clinic_location: Location - 12348
+  - action: user_appointment_form
+  - slot_was_set:
+    - clinic_location: '12348'
+  - slot_was_set:
+    - requested_slot: visit_type
+  - slot_was_set:
+    - visit_type: new_patient
+  - action: user_appointment_form
+  - slot_was_set:
+    - visit_type: new_patient
+  - slot_was_set:
+    - requested_slot: appointment_date
+  - intent: appointment_info
+    entities:
+    - date: 22/08/2024
+  - slot_was_set:
+    - appointment_date: 22/08/2024
+  - action: user_appointment_form
+  - slot_was_set:
+    - appointment_date: 22/08/2024
+  - slot_was_set:
+    - requested_slot: appointment_time
+  - intent: appointment_info
+    entities:
+    - time: 17-21
+  - slot_was_set:
+    - appointment_time: 17-21
+  - action: user_appointment_form
+  - slot_was_set:
+    - appointment_time: 17-21
+  - slot_was_set:
+    - requested_slot: name
+  - intent: user_info
+    entities:
+    - name: Shreedevi
+  - slot_was_set:
+    - name: Shreedevi
+  - action: user_appointment_form
+  - slot_was_set:
+    - name: Shreedevi
+  - slot_was_set:
+    - requested_slot: contact
+  - intent: user_info
+    entities:
+    - contact: '9630258741'
+  - slot_was_set:
+    - contact: '9630258741'
+  - action: user_appointment_form
+  - slot_was_set:
+    - contact: '9630258741'
+  - slot_was_set:
+    - requested_slot: dob
+  - intent: appointment_info
+    entities:
+    - date: 10/02/1995
+  - slot_was_set:
+    - dob: 10/02/1995
+  - action: user_appointment_form
+  - slot_was_set:
+    - dob: 10/02/1995
+  - slot_was_set:
+    - requested_slot: gender
+  - intent: user_info
+    entities:
+    - gender: male
+  - slot_was_set:
+    - gender: male
+  - action: user_appointment_form
+  - slot_was_set:
+    - gender: male
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_user_appointment
+  - slot_was_set:
+    - visit_type: null
+  - slot_was_set:
+    - gender: null
+  - slot_was_set:
+    - dob: null
+  - slot_was_set:
+    - clinic_location: null
+  - slot_was_set:
+    - appointment_date: null
+  - slot_was_set:
+    - appointment_time: null
+  - slot_was_set:
+    - patient_id: '240821222216481'
+  - slot_was_set:
+    - visit_id: '240821222216283'
+  - active_loop: null
+  - intent: fill_patient_history
+  - action: patient_history_form
+  - active_loop: patient_history_form
+  - slot_was_set:
+    - requested_slot: fill_patient_history
+  - intent: affirm
+  - slot_was_set:
+    - fill_patient_history: yes
+  - action: patient_history_form
+  - slot_was_set:
+    - fill_patient_history: yes
+  - slot_was_set:
+    - requested_slot: appointment_symptoms
+  - intent: symptoms_developed
+    entities:
+    - symptoms: headache
+    - symptoms: backpain
+  - slot_was_set:
+    - appointment_symptoms: having headache and backpain
+  - action: patient_history_form
+  - slot_was_set:
+    - appointment_symptoms: having headache and backpain
+  - slot_was_set:
+    - requested_slot: illness_duration
+  - intent: duration_of_illness
+    entities:
+    - duration: 4 days
+  - slot_was_set:
+    - illness_duration: 4 days
+  - action: patient_history_form
+  - slot_was_set:
+    - illness_duration: 4 days
+  - slot_was_set:
+    - requested_slot: ncdiseases
+  - intent: nc_diseases
+    entities:
+    - ncd: mental health conditions
+  - slot_was_set:
+    - ncdiseases: mental health conditions
+  - action: patient_history_form
+  - slot_was_set:
+    - ncdiseases: mental health conditions
+  - slot_was_set:
+    - requested_slot: medications
+  - intent: current_medications
+    entities:
+    - medication: criz
+    - medication: moxikind
+  - slot_was_set:
+    - medications: I am taking criz and moxikind
+  - action: patient_history_form
+  - slot_was_set:
+    - medications: I am taking criz and moxikind
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_patient_history
+  - slot_was_set:
+    - appointment_symptoms: null
+  - slot_was_set:
+    - illness_duration: null
+  - slot_was_set:
+    - ncdiseases: null
+  - slot_was_set:
+    - medications: null
+  - slot_was_set:
+    - patient_id: null
+  - slot_was_set:
+    - visit_id: null
+  - active_loop: null
+  - intent: greet
+  - action: action_greet
+  - intent: reschedule_appointment
+  - action: reschedule_appointment_form
+  - active_loop: reschedule_appointment_form
+  - slot_was_set:
+    - contact: '9630258741'
+  - slot_was_set:
+    - requested_slot: selected_appointment
+  - slot_was_set:
+    - selected_appointment: visit_id-240821222216283, loc_id-12348
+  - action: reschedule_appointment_form
+  - slot_was_set:
+    - selected_appointment: '240821222216283'
+  - slot_was_set:
+    - clinic_location: '12348'
+  - slot_was_set:
+    - requested_slot: appointment_status
+  - intent: reschedule_appointment
+  - slot_was_set:
+    - appointment_status: Rescheduled
+  - action: reschedule_appointment_form
+  - slot_was_set:
+    - appointment_status: Rescheduled
+  - slot_was_set:
+    - requested_slot: appointment_date
+  - intent: appointment_info
+    entities:
+    - date: 25/08/2024
+  - slot_was_set:
+    - appointment_date: 25/08/2024
+  - action: reschedule_appointment_form
+  - slot_was_set:
+    - appointment_date: 25/08/2024
+  - slot_was_set:
+    - requested_slot: appointment_time
+  - intent: appointment_info
+    entities:
+    - time: 17-21
+  - slot_was_set:
+    - appointment_time: 17-21
+  - action: reschedule_appointment_form
+  - slot_was_set:
+    - appointment_time: 17-21
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_reschedule_appointment
+  - slot_was_set:
+    - appointment_status: null
+  - slot_was_set:
+    - selected_appointment: null
+  - slot_was_set:
+    - appointment_date: null
+  - slot_was_set:
+    - appointment_time: null
+  - active_loop: null
+
+- story: interactive_story_2
+  steps:
+  - intent: user_info
+    entities:
+    - contact: '9653265984'
+  - slot_was_set:
+    - dr_contact: '9653265984'
+  - action: action_greet
+  - intent: make_appointment
+  - action: user_appointment_form
+  - active_loop: user_appointment_form
+  - slot_was_set:
+    - requested_slot: clinic_location
+  - slot_was_set:
+    - clinic_location: Location - 12348
+  - action: user_appointment_form
+  - slot_was_set:
+    - clinic_location: '12348'
+  - slot_was_set:
+    - requested_slot: visit_type
+  - slot_was_set:
+    - visit_type: new_patient
+  - action: user_appointment_form
+  - slot_was_set:
+    - visit_type: new_patient
+  - slot_was_set:
+    - requested_slot: appointment_date
+  - intent: appointment_info
+    entities:
+    - date: 27/08/2024
+  - slot_was_set:
+    - appointment_date: 27/08/2024
+  - action: user_appointment_form
+  - slot_was_set:
+    - appointment_date: 27/08/2024
+  - slot_was_set:
+    - requested_slot: appointment_time
+  - intent: appointment_info
+    entities:
+    - time: 09-13
+  - slot_was_set:
+    - appointment_time: 09-13
+  - action: user_appointment_form
+  - slot_was_set:
+    - appointment_time: 09-13
+  - slot_was_set:
+    - requested_slot: name
+  - intent: user_info
+    entities:
+    - name: baburao
+  - slot_was_set:
+    - name: baburao
+  - action: user_appointment_form
+  - slot_was_set:
+    - name: baburao
+  - slot_was_set:
+    - requested_slot: contact
+  - intent: user_info
+    entities:
+    - contact: '9865329865'
+  - slot_was_set:
+    - contact: '9865329865'
+  - action: user_appointment_form
+  - slot_was_set:
+    - contact: '9865329865'
+  - slot_was_set:
+    - dob: 12/12/2002
+  - slot_was_set:
+    - gender: male
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_user_appointment
+  - slot_was_set:
+    - visit_type: null
+  - slot_was_set:
+    - gender: null
+  - slot_was_set:
+    - dob: null
+  - slot_was_set:
+    - clinic_location: null
+  - slot_was_set:
+    - appointment_date: null
+  - slot_was_set:
+    - appointment_time: null
+  - slot_was_set:
+    - patient_id: '240805024708461'
+  - slot_was_set:
+    - visit_id: '240822000006196'
+  - active_loop: patient_history_form
+  - action: patient_history_form
+  - slot_was_set:
+    - requested_slot: fill_patient_history
+  - intent: affirm
+  - slot_was_set:
+    - fill_patient_history: yes
+  - action: patient_history_form
+  - slot_was_set:
+    - fill_patient_history: yes
+  - slot_was_set:
+    - requested_slot: appointment_symptoms
+  - intent: symptoms_developed
+    entities:
+    - symptoms: runny nose and
+    - symptoms: pain in throat
+  - slot_was_set:
+    - appointment_symptoms: runny nose and pain in throat
+  - action: patient_history_form
+  - slot_was_set:
+    - appointment_symptoms: runny nose and pain in throat
+  - slot_was_set:
+    - requested_slot: illness_duration
+  - intent: duration_of_illness
+    entities:
+    - duration: '1 day'
+  - slot_was_set:
+    - illness_duration: '1 day'
+  - action: patient_history_form
+  - slot_was_set:
+    - illness_duration: '1 day'
+  - slot_was_set:
+    - requested_slot: ncdiseases
+  - intent: nc_diseases
+    entities:
+    - ncd: chronic respiratory diseases
+  - slot_was_set:
+    - ncdiseases: chronic respiratory diseases
+  - action: patient_history_form
+  - slot_was_set:
+    - ncdiseases: chronic respiratory diseases
+  - slot_was_set:
+    - requested_slot: medications
+  - intent: user_info
+    entities:
+    - gender: moxikind
+  - intent: current_medications
+    entities:
+    - medication: criz
+    - medication: moxikind
+  - action: action_default_fallback
+  - intent: current_medications
+    entities:
+    - medication: criz
+    - medication: paracetamol
+  - slot_was_set:
+    - medications: criz, paracetamol
+  - action: patient_history_form
+  - slot_was_set:
+    - medications: criz, paracetamol
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_patient_history
+  - slot_was_set:
+    - appointment_symptoms: null
+  - slot_was_set:
+    - illness_duration: null
+  - slot_was_set:
+    - ncdiseases: null
+  - slot_was_set:
+    - medications: null
+  - slot_was_set:
+    - patient_id: null
+  - slot_was_set:
+    - visit_id: null
+  - active_loop: null
+  - intent: greet
+  - action: action_greet
+  - intent: reschedule_appointment
+  - action: reschedule_appointment_form
+  - active_loop: reschedule_appointment_form
+  - slot_was_set:
+    - contact: '9865329865'
+  - slot_was_set:
+    - requested_slot: selected_appointment
+  - intent: current_medications
+    entities:
+    - medication: visit_id-240805024708925
+    - medication: loc_id-12348
+  - slot_was_set:
+    - selected_appointment: visit_id-240805024708925, loc_id-12348
+  - action: reschedule_appointment_form
+  - slot_was_set:
+    - selected_appointment: '240805024708925'
+  - slot_was_set:
+    - clinic_location: '12348'
+  - slot_was_set:
+    - requested_slot: appointment_status
+  - slot_was_set:
+    - appointment_status: Canceled
+  - action: reschedule_appointment_form
+  - slot_was_set:
+    - appointment_status: Canceled
+  - slot_was_set:
+    - appointment_date: 1111/11/11
+  - slot_was_set:
+    - appointment_time: 11-11
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_reschedule_appointment
+  - slot_was_set:
+    - appointment_status: null
+  - slot_was_set:
+    - selected_appointment: null
+  - slot_was_set:
+    - appointment_date: null
+  - slot_was_set:
+    - appointment_time: null
+  - active_loop: null
+  - intent: goodbye
+  - action: utter_goodbye
+  - action: action_deactivate_loop
+  - active_loop: null

@@ -1,0 +1,104 @@
+version: "3.1"
+nlu:
+- lookup: dr_name  
+  examples: |
+    - dr.Madhusri
+    - dr.Meet
+    - dr.Prajeeth
+    - dr.Gyanvi
+    - dr.Govindam
+    - dr.Mairaz
+    - dr.Abhilasha
+    - dr.Mritunjay
+    - dr.Mudit
+    - dr.Mubasshira
+    - dr.Goldy
+    - dr.Monish
+    - dr.Moosvi
+    - dr.Fariya
+    - dr.Toshit
+    - dr.Kanha
+    - dr.Khalid
+    - dr.Kaushiki
+    - dr.Elamathi
+    - dr.Vasundhara
+    - dr.Kandarp
+    - dr.Noopur
+    - dr.Suchita
+    - dr.Sumaiya
+    - dr.Himanshi
+    - dr.Ibrahim
+    - dr.Jagriti
+    - dr.Khansa
+    - dr.Kunaal
+    - dr.Ishwa
+    - dr. Joshika
+    - dr. Sawan
+    - dr. Priyesh
+    - dr. Priyal
+    - dr. Pradium
+    - dr. Omhari
+    - dr. Pranidhi
+    - dr. Leena
+    - dr. Harshada
+    - dr. Prathmesh
+    - dr. Ritank
+    - dr. Rishit
+    - dr. Meenu
+    - dr. Ranjan
+    - dr. Shukant
+    - dr. Jashveer
+    - dr. Nargis
+    - dr. Shreyans
+    - dr. Manaswini
+    - dr. Neelu
+    - dr. Mukund
+    - dr. Eshma
+    - dr. Aruba
+    - dr. Ehtisham
+    - dr. Nitya
+    - dr. Nishu
+    - dr. Noorsaba
+    - dr. Punya
+    - dr. Nihal
+    - dr. Devyanti
+    - dr. Nishchay
+    - dr. Shagun
+    - dr. Joy
+    - dr. Reshami
+    - dr. Ronit
+    - dr. Rishu
+    - dr Prasun
+    - dr Prakharendra
+    - dr Priyamvada
+    - dr Rajneesh
+    - dr Kausar
+    - dr Rouby
+    - dr Sanket
+    - dr Hari
+    - dr Saumile
+    - dr Shagufta
+    - dr Shaad
+    - dr Rupali
+    - dr Jenamani
+    - dr Sadiya
+    - dr Saksham
+    - dr Saharsh
+    - dr Kushan
+    - dr Munthala
+    - dr Mini
+    - dr Mrinal
+    - dr Mudita
+    - dr Mrinalini
+    - dr Medha
+    - dr Meenal
+    - dr Nageshwar
+    - dr Miren
+    - dr Pardhuman
+    - dr Parth
+    - dr Prajal
+    - dr Naseer
+    - dr Nalin
+    - dr.Nav
+    - dr.Niti
+    - dr.Nawaz

@@ -1,0 +1,17 @@
+version: "3.1"
+
+rules:
+
+# - rule: Direct Symptoms mention by user.
+#   condition:
+#   - active_loop: null
+#   steps:
+#   - intent: symptoms_developed
+#   - action: action_out_of_scope
+
+- rule: Direct User Info mention by user.
+  condition:
+  - active_loop: null
+  steps:
+  - intent: user_info
+  - action: action_greet

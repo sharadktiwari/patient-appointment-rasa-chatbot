@@ -1,0 +1,19 @@
+version: "3.1"
+nlu:
+- intent: user_info
+  examples: |
+    - [8956895689](contact)
+    - [Sharad](name)
+    - [8269673369](contact)
+- intent: appointment_info
+  examples: |
+    - [15/08/2000](date)
+- intent: symptoms_developed
+  examples: |
+    - [fever](symptoms) and [headache](symptoms)
+- intent: duration_of_illness
+  examples: |
+    - from [2 days](duration)
+- intent: current_medications
+  examples: |
+    - [criz](medication), [moxikind](medication)

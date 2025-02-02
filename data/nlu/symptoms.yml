@@ -1,0 +1,196 @@
+version: "3.1"
+nlu:
+
+- intent: symptoms_developed
+  examples: |
+    - I have [headache](symptoms) since yesterday evening.
+    - I have [stomachache](symptoms) and [loose motions](symptoms) since last night.
+    - I am having [trouble with my eyes](symptoms). They have been [itchy](symptoms), [sore](symptoms) and [watery](symptoms) since last night. I think they are a little bit [swollen](symptoms) too.
+    - I have [chest pain](symptoms).
+    - my entire [body is aching](symptoms), and I can not stop [shivering](symptoms). My [vision is blurry](symptoms), my [mouth is dry](symptoms), and I feel [fragile](symptoms) [dizzy](symptoms) when I get out of the bed.
+    - I have got [sharp pain in stomach](symptoms) and [heartburn](symptoms).
+    - I have been having some [pain in my joints](symptoms) recently, especially the knees.
+    - I have felt [abnormality in my breasts](symptoms) and a [lump](symptoms) near my underarm area.
+    - I am having a [high temperature](symptoms) and even a [sore throat](symptoms).
+    - I am [not feeling hungry](symptoms). There is always a [headache](symptoms) and [Body ache](symptoms).
+    - having [awakening early](symptoms) [itchy eyes](symptoms)
+    - [barking cough](symptoms)
+    - I am having [high blood pressure](symptoms) and [severe chest pain](symptoms)
+    - I have been having some [runny nose](symptoms) recently, and especially the [cough](symptoms).
+    - I have felt [fatigue](symptoms) and [dizziness](symptoms).
+    - I am having a [high temperature](symptoms) and even a [cold hands and feets](symptoms).
+    - I have been diagnosed with [muscle weakness](symptoms).
+    - having [rusty sputum](symptoms) [stiff neck](symptoms)
+    - [weakness in limbs](symptoms)
+    - having [bleeding of vagina](symptoms) and [headache](symptoms)
+    - [pain  chest](symptoms) and [high blood pressure](symptoms)
+    - having [shortness of breath](symptoms), [pain chest](symptoms) and [sweat](symptoms)
+    - [fever](symptoms) and [high blood pressure](symptoms)
+    - having [burning sensation](symptoms)
+    - I have [behavior hyperactive](symptoms) since yesterday evening.
+    - I have [abdominal bloating](symptoms) and [loose motions](symptoms) since last night.
+    - I am having Episodes of [visual loss](symptoms) in one or the other eye. They have been [itchy](symptoms) since last night. 
+    - I have [chest tightness](symptoms) and [high blood pressure](symptoms).
+    - feeling [clumsiness](symptoms), and I can not stop [feeling suicidal](symptoms). My [vision is blurry](symptoms), my [mouth is dry](symptoms), and I feel [fragile](symptoms) [dizzy](symptoms) when I get out of the bed.
+    - I have got [clammy skin](symptoms) and [tingling or numbness](symptoms).
+    - I have been having some [Double vision](symptoms) recently, especially the [fatigue](symptoms).
+    - I have felt [Urinary urgency](symptoms) and a [lump](symptoms) near my underarm area.
+    - I am having a [Balance problems](symptoms) and even a [sore throat](symptoms).
+    - I have been diagnosed with [Weakness](symptoms) and [high blood pressure](symptoms).
+    - [diarrhoea](symptoms), [fatigue](symptoms), and [malnutrition](symptoms)
+    - [fatigue](symptoms), [weight loss](symptoms), [restlessness](symptoms), [sweating](symptoms), [diarrhoea](symptoms), [fast heart rate](symptoms), [excessive hunger](symptoms), [muscle weakness](symptoms), [irritability](symptoms), and [abnormal menstruation](symptoms)
+    - [constipation](symptoms), [pain during bowel movements](symptoms), [pain in anal region](symptoms), [bloody stool](symptoms), [irritation in anus](symptoms)
+    - [chills](symptoms), [vomiting](symptoms), [fatigue](symptoms), [weight loss](symptoms), [cough](symptoms), [high fever](symptoms), [sweating](symptoms), [loss of appetite](symptoms), [mild fever](symptoms), [yellowing of eyes](symptoms), [swelled lymph nodes](symptoms), [malaise](symptoms), [phlegm](symptoms), [chest pain](symptoms), and [blood in sputum](symptoms)
+    - [vomiting](symptoms), [yellowish skin](symptoms), [abdominal pain](symptoms), [swelling of stomach](symptoms), [distention of abdomen](symptoms), [history of alcohol consumption](symptoms), and [fluid overload](symptoms)
+    - [vomiting](symptoms), [breathlessness](symptoms), [sweating](symptoms), [chest pain](symptoms)
+    - [stomach pain](symptoms), [acidity](symptoms), [ulcers on tongue](symptoms), [vomiting](symptoms), [cough](symptoms), and [chest pain](symptoms)
+    - [skin rash](symptoms), [chills](symptoms), [joint pain](symptoms), [vomiting](symptoms), [fatigue](symptoms), [high fever](symptoms), [headache](symptoms), [nausea](symptoms), [loss of appetite](symptoms), [pain behind the eyes](symptoms), [back pain](symptoms), [malaise](symptoms), [muscle pain](symptoms), and [red spots over body](symptoms)
+    - [vomiting](symptoms), [headache](symptoms), and [altered sensorium](symptoms)
+    - [burning micturition](symptoms), [bladder discomfort](symptoms), and [continuous feel of urine](symptoms)
+    - [skin rash](symptoms), [high fever](symptoms), [blister](symptoms), [red sore around nose](symptoms), and [yellow crust ooze](symptoms)
+    - [itching](symptoms), [yellowish skin](symptoms), [nausea](symptoms), [loss of appetite](symptoms), [abdominal pain](symptoms), [yellowing of eyes](symptoms)
+    - [abdominal pain](symptoms), [discomfort](symptoms), [loss of appetite](symptoms), and [fatigue](symptoms)
+    - [burning feeling in stomach](symptoms), [heartburn](symptoms), [high blood pressure](symptoms), [indigestion](symptoms), and [nausea](symptoms)
+    - [chills](symptoms), [vomiting](symptoms), [high fever](symptoms), [sweating](symptoms), [headache](symptoms), [nausea](symptoms), [diarrhoea](symptoms), [muscle pain](symptoms)
+    - [skin rash](symptoms), [high fever](symptoms), [blister](symptoms), [red sore around nose](symptoms), and [yellow crust ooze](symptoms)
+    - [vomiting](symptoms), [sunken eyes](symptoms), [dehydration](symptoms), [diarrhoea](symptoms)
+    - [itching](symptoms), [vomiting](symptoms), [fatigue](symptoms), [weight loss](symptoms), [high fever](symptoms), [yellowish skin](symptoms), [dark urine](symptoms), [abdominal pain](symptoms)
+    - [stomach pain](symptoms), [acidity](symptoms), [ulcers on tongue](symptoms), [vomiting](symptoms), [cough](symptoms), [chest pain](symptoms)
+    - [fatigue](symptoms), [cramps](symptoms), [bruising](symptoms), [obesity](symptoms), [swollen legs](symptoms), [prominent veins on calf](symptoms)
+    - [joint pain](symptoms), [fatigue](symptoms), [high fever](symptoms), [yellowish skin](symptoms), [dark urine](symptoms), [nausea](symptoms), [loss of appetite](symptoms), [abdominal pain](symptoms), [yellowing of eyes](symptoms), [acute liver failure](symptoms), [coma](symptoms), and [stomach bleeding](symptoms)
+    - [fatigue](symptoms), [yellowish skin](symptoms), [nausea](symptoms), [loss of appetite](symptoms), and [yellowing of eyes](symptoms), family history.
+    - [pus filled pimples](symptoms), [blackheads](symptoms), and [scurring](symptoms)
+    - [joint pain](symptoms), [vomiting](symptoms), [fatigue](symptoms), [yellowish skin](symptoms), [dark urine](symptoms), [nausea](symptoms), [loss of appetite](symptoms), [abdominal pain](symptoms), and [yellowing of eyes](symptoms)
+    - [vomiting](symptoms), [headache](symptoms), and [weakness of one body side](symptoms)
+    - [continuous sneezing](symptoms), [shivering](symptoms), [chills](symptoms), and [watering from eyes](symptoms)
+    - [vomiting](symptoms), [headache](symptoms), [nausea](symptoms), [spinning movements](symptoms), [loss of balance](symptoms), [unsteadiness](symptoms)
+    - [joint pain](symptoms), [neck pain](symptoms), [knee pain](symptoms), [hip joint pain](symptoms), [swelling joints](symptoms), [painful walking](symptoms)
+    - [skin issues](symptoms), [itchy skin](symptoms), [rashes](symptoms), [color change in skin](symptoms), [lumps or bumps](symptoms)
+    - [fatigue](symptoms), [cramps](symptoms), [bruising](symptoms), [obesity](symptoms), [swollen legs](symptoms), [swollen blood vessels](symptoms), and [prominent veins on calf](symptoms)
+    - [skin rash](symptoms), [joint pain](symptoms), [skin peeling](symptoms), [silver like dusting](symptoms), and [small dents in nails](symptoms), [inflammatory nails](symptoms)
+    - [itching](symptoms), [skin rash](symptoms), [stomach pain](symptoms), [burning micturition](symptoms), and [spotting urination](symptoms)
+    - [clubbing of fingers](symptoms)
+    - [vomiting](symptoms), [headache](symptoms), [weakness of one body side](symptoms), and [altered sensorium](symptoms)
+    - [itching](symptoms), [skin rash](symptoms), and [dischromic patches](symptoms)
+    - [diarrhoea](symptoms), [greasy stools](symptoms), [fatigue](symptoms), [weight loss](symptoms), [malnutrition](symptoms), and [swelling in lower extremities](symptoms)
+    - [fatigue](symptoms), [restlessness](symptoms), [lethargy](symptoms), [irregular sugar level](symptoms), [blurred and distorted vision](symptoms), [obesity](symptoms), [excessive hunger](symptoms), [increased appetite](symptoms), and [polyuria](symptoms)
+    - [fatigue](symptoms), [weight loss](symptoms), [restlessness](symptoms), [lethargy](symptoms), [irregular sugar level](symptoms), [blurred and distorted vision](symptoms), [obesity](symptoms), [excessive hunger](symptoms), [increased appetite](symptoms), [polyuria](symptoms)
+    - [stomach pain](symptoms), [ulcers on tongue](symptoms), [vomiting](symptoms), [cough](symptoms), [high blood pressure](symptoms), and [chest pain](symptoms)
+    - [fatigue](symptoms), [yellowish skin](symptoms), [nausea](symptoms), [loss of appetite](symptoms), [yellowing of eyes](symptoms), [family history](symptoms)
+    - I have [heartburn](symptoms), [indigestion](symptoms), [frequent vomiting](symptoms), [difficulty swallowing](symptoms), [upper abdominal discomfort](symptoms)
+    - [fatigue](symptoms), [weight gain](symptoms), [cold hands and feets](symptoms), [mood swings](symptoms), [lethargy](symptoms), [dizziness](symptoms), [puffy face and eyes](symptoms), [enlarged thyroid](symptoms), [brittle nails](symptoms), [swollen extremeties](symptoms), [depression](symptoms), [irritability](symptoms), and [abnormal menstruation](symptoms)
+    - [vomiting](symptoms), [indigestion](symptoms), [loss of appetite](symptoms), [abdominal pain](symptoms), [passage of gases](symptoms), [internal itching](symptoms)
+    - [joint pain](symptoms), [yellowish skin](symptoms), [dark urine](symptoms), [nausea](symptoms), [loss of appetite](symptoms), and [abdominal pain](symptoms), [diarrhoea](symptoms), [mild fever](symptoms), [yellowing of eyes](symptoms), [muscle pain](symptoms)
+    - [constant hunger](symptoms), [appetite](symptoms), [stomach cramps](symptoms), [bloating](symptoms), and [gassy](symptoms)
+    - [vomiting](symptoms), [fatigue](symptoms), [anxiety](symptoms), [sweating](symptoms), [headache](symptoms), [nausea](symptoms), [blurred and distorted vision](symptoms), [excessive hunger](symptoms), [slurred speech](symptoms), [irritability](symptoms), and [palpitations](symptoms)
+    - [stomach pain](symptoms), [acidity](symptoms), [ulcers on tongue](symptoms), [vomiting](symptoms), [cough](symptoms), [chest pain](symptoms)
+    - [skin rash](symptoms), [joint pain](symptoms), [skin peeling](symptoms), [silver like dusting](symptoms), [small dents in nails](symptoms), [inflammatory nails](symptoms)
+    - [vomiting](symptoms), [breathlessness](symptoms), and [chest pain](symptoms).
+    - [vomiting](symptoms), [breathlessness](symptoms), [sweating](symptoms), and [chest pain](symptoms)
+    - [joint pain](symptoms), [neck pain](symptoms), [knee pain](symptoms), [hip joint pain](symptoms), [swelling joints](symptoms), [painful walking](symptoms)
+    - [chills](symptoms), [vomiting](symptoms), [fatigue](symptoms), [high fever](symptoms), [headache](symptoms), [nausea](symptoms), [constipation](symptoms), [abdominal pain](symptoms), [diarrhoea](symptoms), [toxic look (typhos)](symptoms), [belly pain](symptoms)
+    - I have been feeling very thirsty and hungry lately. I also feel very tired at times.
+    - [stiff neck](symptoms), [swelling joints](symptoms), [movement stiffness](symptoms), [painful walking](symptoms)
+    - [vomiting](symptoms), [fatigue](symptoms), [anxiety](symptoms), [sweating](symptoms), [headache](symptoms), [nausea](symptoms), [blurred and distorted vision](symptoms), [excessive hunger](symptoms), [slurred speech](symptoms), [irritability](symptoms), [palpitations](symptoms)
+    - [joint pain](symptoms), [vomiting](symptoms), [fatigue](symptoms), [high fever](symptoms), [yellowish skin](symptoms), [dark urine](symptoms), [nausea](symptoms), [loss of appetite](symptoms), [abdominal pain](symptoms), [yellowing of eyes](symptoms), [acute liver failure](symptoms), [coma](symptoms), [stomach bleeding](symptoms)
+    - [continuous sneezing](symptoms), [shivering](symptoms), [watering from eyes](symptoms)
+    - [vomiting](symptoms), [headache](symptoms), [weakness of one body side](symptoms), and [altered sensorium](symptoms)
+    - [fatigue](symptoms), [mood swings](symptoms), [weight loss](symptoms), [restlessness](symptoms), [sweating](symptoms), [diarrhoea](symptoms), [fast heart rate](symptoms), [excessive hunger](symptoms), [muscle weakness](symptoms), [irritability](symptoms), [abnormal menstruation](symptoms)
+    - [stomach pain](symptoms), [acidity](symptoms), [ulcers on tongue](symptoms), [cough](symptoms), and [chest pain](symptoms)
+    - [vomiting](symptoms), [yellowish skin](symptoms), [abdominal pain](symptoms), [swelling of stomach](symptoms), [distention of abdomen](symptoms), [history of alcohol consumption](symptoms), [fluid overload](symptoms)
+    - [fatigue](symptoms), [weight loss](symptoms), [restlessness](symptoms), [lethargy](symptoms), [irregular sugar level](symptoms), [blurred and distorted vision](symptoms), [obesity](symptoms), [excessive hunger](symptoms), [increased appetite](symptoms), [polyuria](symptoms)
+    - [skin rash](symptoms), [blackheads](symptoms), and [scurring](symptoms)
+    - [muscle weakness](symptoms), [stiff neck](symptoms), [swelling joints](symptoms), [movement stiffness](symptoms), and [painful walking](symptoms)
+    - [chills](symptoms), [vomiting](symptoms), [high fever](symptoms), [sweating](symptoms), [headache](symptoms), [nausea](symptoms), and [diarrhoea](symptoms), [muscle pain](symptoms)
+    - I've been feeling really sick lately. I've been getting [chills](symptoms) and I'm always [tired](symptoms). I have this [cough](symptoms) that just won't go away. It's really hard to breathe when I cough and my [chest hurts](symptoms). I've also been [coughing up](symptoms) this really gross, [rusty phlegm](symptoms) and my [heart is racing](symptoms).
+    - [vomiting](symptoms), [fatigue](symptoms), [anxiety](symptoms), [sweating](symptoms), [headache](symptoms), [nausea](symptoms), [blurred and distorted vision](symptoms), [excessive hunger](symptoms), [drying and tingling lips](symptoms), [slurred speech](symptoms), [irritability](symptoms), [palpitations](symptoms)
+    - [itching](symptoms), [skin rash](symptoms), [yellowish skin](symptoms), [nausea](symptoms), [loss of appetite](symptoms), [abdominal pain](symptoms), [yellowing of eyes](symptoms)
+    - I have been experiencing a [high fever](symptoms) for the past few days. I also feel [weak](symptoms) and my [muscles pain](symptoms). I cannot work all day because of this.
+    - [muscle weakness](symptoms), [stiff neck](symptoms), [swelling joints](symptoms), [movement stiffness](symptoms), [painful walking](symptoms)
+    - [fatigue](symptoms), [cramps](symptoms), [bruising](symptoms), [obesity](symptoms), [swollen legs](symptoms), [swollen blood vessels](symptoms), and [prominent veins on calf](symptoms)
+    - I've been feeling very sick. I have a [high fever](symptoms), [shortness of breath](symptoms), and I'm [sweating](symptoms) and [shivering](symptoms). I've also been [coughing up](symptoms) a lot of brownish [phlegm](symptoms) and my [heart is racing](symptoms).
+    - [itching](symptoms), [skin rash](symptoms), [stomach pain](symptoms), and [burning micturition](symptoms)
+    - [stomach pain](symptoms), [acidity](symptoms), [ulcers on tongue](symptoms), [vomiting](symptoms), [cough](symptoms), and [chest pain](symptoms)
+    - [skin rash](symptoms), [pus filled pimples](symptoms), [blackheads](symptoms)
+    - [itching](symptoms), [skin rash](symptoms), [stomach pain](symptoms), [burning micturition](symptoms), [spotting urination](symptoms)
+    - [chills](symptoms), [vomiting](symptoms), [high fever](symptoms), [sweating](symptoms), [headache](symptoms), [diarrhoea](symptoms), and [muscle pain](symptoms)
+    - [chills](symptoms), [vomiting](symptoms), [high fever](symptoms), [fatigue](symptoms), [weight loss](symptoms), [cough](symptoms), [high fever](symptoms), [breathlessness](symptoms), [sweating](symptoms), and [loss of appetite](symptoms), [mild fever](symptoms), [yellowing of eyes](symptoms), [swelled lymph nodes](symptoms), [malaise](symptoms), [phlegm](symptoms), [chest pain](symptoms), and [blood in sputum](symptoms)
+    - [indigestion](symptoms), [loss of appetite](symptoms), [abdominal pain](symptoms), [passage of gases](symptoms), and [internal itching](symptoms)
+    - I have a really strong appetite and I'm always hungry. My [stomach](symptoms) sometimes [aches](symptoms) and [cramps](symptoms). I have really painful [gas](symptoms) and [bloating](symptoms) after eating.
+    - [vomiting](symptoms), [headache](symptoms), [weakness of one body side](symptoms), and [altered sensorium](symptoms)
+    - [itching](symptoms), [skin rash](symptoms), [nodal skin eruptions](symptoms), and [dischromic patches](symptoms)
+    - [chills](symptoms), [vomiting](symptoms), [high fever](symptoms), [sweating](symptoms), [headache](symptoms), and [nausea](symptoms), [diarrhoea](symptoms), [muscle pain](symptoms)
+    - [itching](symptoms), [vomiting](symptoms), [fatigue](symptoms), [weight loss](symptoms), and [high fever](symptoms), [yellowish skin](symptoms), [dark urine](symptoms), and [abdominal pain](symptoms)
+    - [vomiting](symptoms), [indigestion](symptoms), [loss of appetite](symptoms), [abdominal pain](symptoms), [passage of gases](symptoms), [internal itching](symptoms)
+    - [skin rash](symptoms), [joint pain](symptoms), [skin peeling](symptoms), [silver like dusting](symptoms), [small dents in nails](symptoms), and [inflammatory nails](symptoms)
+    - [weakness in limbs](symptoms), [neck pain](symptoms), [dizziness](symptoms), [loss of balance](symptoms)
+    - [fatigue](symptoms), [high fever](symptoms), [breathlessness](symptoms), [family history](symptoms), and [mucoid sputum](symptoms)
+    - [chills](symptoms), [vomiting](symptoms), [high fever](symptoms), [sweating](symptoms), [headache](symptoms), [nausea](symptoms), [diarrhoea](symptoms), [muscle pain](symptoms)
+    - [muscle weakness](symptoms), [stiff neck](symptoms), [swelling joints](symptoms), [movement stiffness](symptoms), and [painful walking](symptoms)
+    - [vomiting](symptoms), [sweating](symptoms), [chest pain](symptoms)
+    - [stomach pain](symptoms), [acidity](symptoms), [ulcers on tongue](symptoms), [vomiting](symptoms), [cough](symptoms), and [chest pain](symptoms)
+    - [muscle weakness](symptoms), [stiff neck](symptoms), [swelling joints](symptoms), [movement stiffness](symptoms), [painful walking](symptoms)
+    - [chills](symptoms), [fatigue](symptoms), [cough](symptoms), [high fever](symptoms), [breathlessness](symptoms), [malaise](symptoms), [phlegm](symptoms), [chest pain](symptoms), [fast heart rate](symptoms), and [rusty sputum](symptoms)
+    - [skin rash](symptoms), [pus filled pimples](symptoms), [blackheads](symptoms), and [scurring](symptoms)
+    - [joint pain](symptoms), [vomiting](symptoms), [yellowish skin](symptoms), [dark urine](symptoms), [nausea](symptoms), and [loss of appetite](symptoms), [abdominal pain](symptoms), [diarrhoea](symptoms), [mild fever](symptoms), and [yellowing of eyes](symptoms), [muscle pain](symptoms)
+    - [vomiting](symptoms), [yellowish skin](symptoms), [abdominal pain](symptoms), [swelling of stomach](symptoms), [distention of abdomen](symptoms), [history of alcohol consumption](symptoms), [fluid overload](symptoms)
+    - [joint pain](symptoms), [vomiting](symptoms), [fatigue](symptoms), [high fever](symptoms), [yellowish skin](symptoms), [dark urine](symptoms), [nausea](symptoms), [loss of appetite](symptoms), [abdominal pain](symptoms), [yellowing of eyes](symptoms), [coma](symptoms), and [stomach bleeding](symptoms)
+    - [joint pain](symptoms), [vomiting](symptoms), [fatigue](symptoms), and [high fever](symptoms), [yellowish skin](symptoms), [dark urine](symptoms), [nausea](symptoms), [loss of appetite](symptoms), [abdominal pain](symptoms), [yellowing of eyes](symptoms), [acute liver failure](symptoms), [coma](symptoms), and [stomach bleeding](symptoms)
+    - [vomiting](symptoms), [breathlessness](symptoms), [sweating](symptoms), and [chest pain](symptoms)
+    - [muscle pain](symptoms), [joint pain](symptoms), [fatigue](symptoms), [headache](symptoms), [rash](symptoms), [itching](symptoms), [swelling](symptoms)
+    - [dehydration](symptoms), [irritability](symptoms), [confusion](symptoms), [lethargy](symptoms), [dry mouth](symptoms), [dark urine](symptoms), [dizziness](symptoms), [increased thirst](symptoms), and [sunken eyes](symptoms)
+    - [headache](symptoms), [cough](symptoms), [sore throat](symptoms), [fever](symptoms), [muscle aches](symptoms), [tiredness](symptoms)
+    - [chronic cough](symptoms), [fever](symptoms), [shortness of breath](symptoms), [weight loss](symptoms), [fatigue](symptoms)
+    - [muscle pain](symptoms), [joint pain](symptoms), [stomach pain](symptoms), [vomiting](symptoms), [diarrhoea](symptoms), [fever](symptoms), [rash](symptoms), [headache](symptoms), and [joint swelling](symptoms)
+    - [abdominal pain](symptoms), [nausea](symptoms), [vomiting](symptoms), [bloody stool](symptoms), [fever](symptoms), [weight loss](symptoms), [fatigue](symptoms)
+    - [nausea](symptoms), [vomiting](symptoms), [diarrhoea](symptoms), [stomach cramps](symptoms), [fever](symptoms), and [muscle aches](symptoms)
+    - [muscle pain](symptoms), [joint pain](symptoms), [fever](symptoms), [rash](symptoms), [sore throat](symptoms), [tiredness](symptoms), [muscle weakness](symptoms)
+    - [persistent cough](symptoms), [shortness of breath](symptoms), [fever](symptoms), [chronic fatigue](symptoms), [night sweats](symptoms), and [weight loss](symptoms)
+    - [muscle pain](symptoms), [joint pain](symptoms), [fever](symptoms), [rash](symptoms), [sore throat](symptoms), [tiredness](symptoms)
+    - [high fever](symptoms), [chills](symptoms), [muscle pain](symptoms), [headache](symptoms), [nausea](symptoms), [vomiting](symptoms), [sore throat](symptoms), [fatigue](symptoms), [runny nose](symptoms), and [diarrhoea](symptoms)
+    - [headache](symptoms), [fever](symptoms), [muscle aches](symptoms), [sore throat](symptoms), [cough](symptoms), [chills](symptoms), [runny nose](symptoms), [shortness of breath](symptoms), [fatigue](symptoms), [nausea](symptoms), [vomiting](symptoms), [diarrhoea](symptoms)
+    - [swollen legs](symptoms), [chest pain](symptoms), [shortness of breath](symptoms), [leg pain](symptoms), [fever](symptoms), [cough](symptoms), [swelling in one leg](symptoms), [redness](symptoms), [warmth in leg](symptoms), and [pain in leg](symptoms)
+    - [sore throat](symptoms), [cough](symptoms), [fever](symptoms), [chills](symptoms), [muscle aches](symptoms), [fatigue](symptoms)
+    - [muscle pain](symptoms), [joint pain](symptoms), [fatigue](symptoms), [fever](symptoms), [headache](symptoms), [rash](symptoms)
+    - i am facing symptoms like [stomach pain](symptoms), [vomiting](symptoms), and [bloating](symptoms).
+    - I have a [burning in my legs](symptoms) that gets worse when I stand or walk for long periods of time.
+    - I have been experiencing a lot of [belly pain](symptoms) and [constipation](symptoms). I also feel like I need to [vomit](symptoms), and I am [feeling very weak](symptoms).
+    - [itching](symptoms), [redness](symptoms), [skin](symptoms), [nails](symptoms), [brittle](symptoms), [dents](symptoms).
+    - [cough](symptoms), [sneezing](symptoms), [palpitations](symptoms), [infections](symptoms), [throat hurts](symptoms).
+    - [fever](symptoms), [chills](symptoms), [vomiting](symptoms), [headache](symptoms), [sweating](symptoms), [nauseous](symptoms), and [muscle aches](symptoms).
+    - [eyesight problems](symptoms), [increased appetite](symptoms), [sore neck](symptoms), and [melancholy](symptoms), [irritability](symptoms), [regular headaches](symptoms), [acid reflux](symptoms), [indigestion](symptoms), and [frequent migraines](symptoms).
+    - [headaches](symptoms), [blurred and distorted vision](symptoms), and [visual disturbance](symptoms).
+    - [bloated](symptoms), [uneasy](symptoms), [losing weight](symptoms), [eating](symptoms), [bloody vomit](symptoms), and [dark, tarry stools](symptoms).
+    - [headache](symptoms), [chest pain](symptoms), [dizziness](symptoms).
+    - [nauseous](symptoms), [vomit](symptoms), [high fever](symptoms), [chills](symptoms), and [lost my appetite](symptoms).
+    - [chills](symptoms), [fever](symptoms), [stomach](symptoms), [hurting](symptoms).
+    - [itching](symptoms), [vomiting](symptoms), [lost a lot of weight](symptoms), [fever](symptoms), [skin](symptoms), [yellow](symptoms), [urine](symptoms), [dark](symptoms), and [abdominal pain](symptoms).
+    - [thirsty](symptoms), [urinating](symptoms), [mouth](symptoms), [throat](symptoms), [dry](symptoms), [hungry](symptoms).
+    - [vomiting](symptoms), [diarrhea](symptoms), [tired](symptoms), [skin](symptoms), [yellow](symptoms), [urine](symptoms), [dark](symptoms), and [abdominal pain](symptoms).
+    - [thirsty](symptoms), [hungry](symptoms), [tired](symptoms).
+    - [tired](symptoms), [weak](symptoms), [vomiting](symptoms), [rashes](symptoms), [arms](symptoms), [neck](symptoms), [legs](symptoms).
+    - [headache](symptoms), [dull ache](symptoms), [sharp pain](symptoms), [stomach pains](symptoms), [constipation](symptoms), and [diarrhea](symptoms).
+    - [pain](symptoms), [back](symptoms), [neck](symptoms), [cough](symptoms), [weak](symptoms), [dizzy](symptoms).
+    - [low temperature](symptoms), [pee](symptoms), and [kidneys](symptoms).
+    - [bloody stools](symptoms), [weak](symptoms), and [anaemia](symptoms).
+    - [constipation](symptoms), and [stomach ache](symptoms).
+    - [cramps](symptoms), [calves](symptoms), [bruise marks](symptoms), [calves](symptoms), and [tired](symptoms).
+    - [headaches](symptoms), [distorted vision](symptoms), [excessive hunger](symptoms), [stiff neck](symptoms), [depression](symptoms), [irritability](symptoms), [visual disturbance](symptoms).
+    - [headaches](symptoms), [blurred vision](symptoms), and [nauseous](symptoms).
+    - [migraines](symptoms), [distorted eyesight](symptoms), [excessive appetite](symptoms), [painful neck](symptoms), [melancholy](symptoms), [irritability](symptoms), [acid reflux](symptoms), [indigestion](symptoms), [regular headaches](symptoms).
+    - [belly pain](symptoms), [constipation](symptoms), [fever](symptoms), [chills](symptoms), and [headaches](symptoms).
+    - [losing weight](symptoms), [pain and discomfort](symptoms), [stomach](symptoms), [antacids](symptoms), [mouth](symptoms).
+    - [vomiting](symptoms), [lost my appetite](symptoms), [rashes](symptoms), [skin](symptoms), and [eyes](symptoms).
+    - [forget things](symptoms), and [low mental clarity](symptoms).
+    - [heartburn](symptoms), [indigestion](symptoms), [vomit](symptoms), [swallowing food](symptoms), [throat](symptoms), [upper abdomen](symptoms).
+    - [little red spots](symptoms), [body](symptoms), [lost my appetite](symptoms), [exhausted](symptoms), and [severe headache](symptoms).
+    - [cramps](symptoms), [calves](symptoms), [overweight](symptoms), [legs](symptoms), [swell](symptoms), [varicose veins](symptoms).
+    - [legs](symptoms), [swollen](symptoms), [blood vessels](symptoms), [swollen legs](symptoms), [swollen veins](symptoms), and [calves](symptoms).
+    - [nausea](symptoms), [chest discomfort](symptoms), [chest discomfort](symptoms), [shiver](symptoms), [nervous](symptoms), and [high blood pressure](symptoms).
+    - [skin irritations](symptoms), [rashes](symptoms), [skin](symptoms), [skin](symptoms).
+    - [strange veins](symptoms), [legs](symptoms), and [overweight](symptoms).
+    - [body pain](symptoms), [fever](symptoms), and [throwing up](symptoms).
+    - [chest pain](symptoms), [breathing difficulties](symptoms), [fever](symptoms), [coughing](symptoms).
+    - [cough](symptoms), [throat pain](symptoms), [difficulty breathing](symptoms).
+    - [red rashes](symptoms), [arms](symptoms), [legs](symptoms), and [painful](symptoms).
+    - [peeling skin](symptoms), [headache](symptoms), and [throwing up](symptoms).

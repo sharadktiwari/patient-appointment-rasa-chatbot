@@ -1,0 +1,240 @@
+version: "3.1"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - HI
+    - Hi
+    - HIii
+    - Hiiii
+    - HIII
+    - Home
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - hii
+    - Hiee
+    - Namaste
+    - Holaa
+    - Hiee there!
+    - heyy
+    - Hello there
+    - Hiya
+    - Heyy
+    - Hey Buddy
+    - Merhaba 
+    - Salut
+    - Good evening
+
+- intent: out_of_scope
+  examples: |
+    - hmmm
+    - yesssssss
+    - what do you do
+    - what else you can do
+    - how are you
+    - where do you live
+    - in which city do you live
+    - your favourite food
+    - your favourite colour
+    - your favourite work
+    - How are you doing?
+    - how are you?
+    - how is your day?
+    - bored af!!
+    - you are mad?
+    - are you mad?
+    - What else you can do?
+    - What are you designed to do?
+    - Do you mind If I ask you few questions?
+    - Can you dance or sing?
+    - Can you tell me your diet?
+    - What are you good at?
+    - Where can I find you?
+    - Can you sing?
+    - What's your favorite sport?
+    - Can you do magic tricks?
+    - Tell me a joke?
+    - What are your hobbies?
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+    - bye
+    - stop
+    - Stop
+    - finish
+    - exit
+    - quit
+    - see you again
+    - nice to have chat with you
+    - bbyee
+    - catch you later
+    - See you Later
+    - Peace out
+    - Bye for now
+    - I'm heading out
+    - Alright, bye
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - Ok
+    - agreed!!
+    - sure
+    - appriciate it
+    - nice
+    - approved
+    - acknowledge
+    - Sure
+    - Definitely
+    - That's true
+    - Alright
+    - Yeah, sure
+    - Exactly
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+    - Noo
+    - I reject your saying
+    - I negate this
+    - nay
+    - nop
+    - decline
+    - I don't think so
+    - Not Sure
+    - I'm not into that
+    - Not possible
+    - I totally Disagree
+    
+- intent: wellbeing_well
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - I am feeling good
+    - I am good
+    - I feel good
+    - I am well
+    - I feel great
+    - couldn't be better
+    - fit as fiddle
+    - Not bad
+    - Much better
+    - All is well
+    - I'm very well
+    - That's great to hear!
+    - Awesome! If you need anything, just let me know
+    - Not Bad 
+  
+- intent: wellbeing_not_well
+  examples: |
+    - I am not feeling well
+    - i am unwell
+    - I do not feel well today
+    - not good
+    - not very good
+    - Not so great , TBH.
+    - Feeling rough
+    - Feeling weak lately
+    - Not well
+    - I'm feeling down
+    - Not felling well
+    - I'm feeling bad
+    - Feeling low
+    - feeling miserable 
+
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+    - are you a robot?
+    - am I talking to an actual person?
+    - you're a bot aren't you?
+    - are you even a real person?
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+    - Who made you?
+    - To whom you belong?
+    - who is your owner?
+    - who built you?
+    - where you origanated?
+    - Who is your father?
+    - Are you a robot?
+    - Can you think?
+    - Can you connect me to doctor directly?
+    - Can we have a chat?
+    - How can I hack you?
+    - Will you be my friend?
+    - Are you really a bot?
+    - What's the best thing you can do?
+    - Is there a person behind this chat?
+    - Is someone controlling you?
+
+
+- intent: restart_bot
+  examples: |
+    - restart
+    - Restart
+    - Please Restart
+    - Please restart
+    - restart the process
+    - please restart the bot
+    - Can you please restart
+
+
+- intent: pass_over
+  examples: |
+    - [skip](skip) out 
+    - [pass](skip) out this option
+    - [pass](skip) out
+    - [skip](skip) this option
+    - [pass](skip) over
+    - [pass](skip) over this
+    - [skip](skip) over
+    

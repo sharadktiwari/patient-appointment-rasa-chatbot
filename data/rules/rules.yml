@@ -1,0 +1,44 @@
+version: "3.1"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+  - action: action_deactivate_loop
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: action_iamabot
+
+- rule: Ask Assistance anytime the user says hello
+  steps:
+  - intent: greet
+  - action: action_greet
+
+- rule: restart anytime the user says restart
+  steps:
+  - intent: restart_bot
+  - action: action_restart
+
+- rule: action wellbeing well when wellbeing well
+  steps:
+  - intent: wellbeing_well
+  - action: action_wellbeing_well
+
+
+- rule: action wellbeing not well when wellbeing not well
+  steps:
+  - intent: wellbeing_not_well
+  - action: action_wellbeing_not_well
+
+- rule: Out of Scope
+  steps:
+    - intent: out_of_scope
+    - action: action_out_of_scope
+

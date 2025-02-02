@@ -1,0 +1,20 @@
+version: "3.1"
+
+rules:
+
+# - rule: Schedule a reminder terminate
+#   steps:
+#   # - action: action_default_fallback
+#   - intent: test
+#   - action: action_react_to_set_reminder_terminate_session
+
+- rule: Schedule a reaction reminder
+  steps:
+  - intent: reminder_terminate   
+  - action: action_react_to_set_reminder_terminate_session
+
+- rule: Schedule a reminder resume
+  steps:
+  # - action: action_default_fallback
+  - intent: reminder_resume_bot
+  - action: action_react_to_reminder_resume_bot

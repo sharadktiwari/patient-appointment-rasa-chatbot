@@ -1,0 +1,101 @@
+version: "3.1"
+
+rules:
+
+- rule: Activate Show Appointment Form
+  steps:
+  - intent: show_appointment
+  - action: show_appointment_form
+  - active_loop: show_appointment_form
+  wait_for_user_input: false
+
+
+- rule: Submit Show Appointment Form
+  condition:
+  - active_loop: show_appointment_form
+  steps:
+  - action: show_appointment_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: action_show_appointment
+
+
+- rule: greet in Show Appointment Form
+  condition:
+  - active_loop: show_appointment_form
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: show_appointment_form
+  - active_loop: show_appointment_form
+  wait_for_user_input: false
+
+
+- rule: Wellbeing well in Show Appointment Form
+  condition:
+  - active_loop: show_appointment_form
+  steps:
+  - intent: wellbeing_well
+  - action: action_wellbeing_well
+  - action: show_appointment_form
+  - active_loop: show_appointment_form
+  wait_for_user_input: false
+
+
+- rule: Wellbeing Not well in Show Appointment Form
+  condition:
+  - active_loop: show_appointment_form
+  steps:
+  - intent: wellbeing_not_well
+  - action: action_wellbeing_not_well
+  - action: show_appointment_form
+  - active_loop: show_appointment_form
+  wait_for_user_input: false
+
+
+- rule: Bot Challenge in Show Appointment Form
+  condition:
+  - active_loop: show_appointment_form
+  steps:
+  - intent: bot_challenge
+  - action: action_iamabot
+  - action: show_appointment_form
+  - active_loop: show_appointment_form
+  wait_for_user_input: false
+
+
+- rule: Out Of Scope in Show Appointment Form
+  condition:
+  - active_loop: show_appointment_form
+  steps:
+  - intent: out_of_scope
+  - action: action_out_of_scope
+  - action: show_appointment_form
+  - active_loop: show_appointment_form
+  wait_for_user_input: false
+
+
+- rule: GoodBye in Show Appointment
+  condition:
+  - active_loop: show_appointment_form
+  steps:
+  - or:
+    - intent: goodbye
+    - intent: deny
+  - action: action_deactivate_loop
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: utter_goodbye
+
+
+- rule: Restart in Show Appointment Form
+  condition:
+  - active_loop: show_appointment_form
+  steps:
+  - intent: restart_bot
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_restart

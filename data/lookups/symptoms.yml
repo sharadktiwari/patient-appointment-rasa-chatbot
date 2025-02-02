@@ -1,0 +1,136 @@
+version: "3.1"
+nlu:
+- lookup: symptoms 
+  examples: |
+    - illness
+    - skin peeling
+    - burning micturition
+    - distention of abdomen
+    - runny nose
+    - yellow crust ooze
+    - continuous feel of urine
+    - continuous sneezing
+    - blurred and distorted vision
+    - visual disturbances
+    - anxiety
+    - swollen blood vessels
+    - indigestion
+    - fast heart rate
+    - cough
+    - silver like dusting
+    - drying and tingling lips
+    - movement stiffness
+    - patches in throat
+    - vomiting
+    - blood in sputum
+    - swollen extremeties
+    - mood swings
+    - nausea
+    - toxic look (typhos)
+    - inflammatory nails
+    - weight loss
+    - phlegm
+    - increased appetite
+    - lack of concentration
+    - muscle wasting
+    - loss of appetite
+    - loss of smell
+    - blackheads
+    - chills
+    - slurred speech
+    - internal itching
+    - sunken eyes
+    - knee pain
+    - malaise
+    - back pain
+    - sinus pressure
+    - polyuria
+    - prominent veins on calf
+    - lethargy
+    - acute liver failure
+    - spotting urination
+    - watering from eyes
+    - abnormal menstruation
+    - restlessness
+    - irregular sugar level
+    - itching
+    - yellow urine
+    - bruising
+    - swelled lymph nodes
+    - ulcers on tongue
+    - pain in anal region
+    - constipation
+    - joint pain
+    - bladder discomfort
+    - coma
+    - enlarged thyroid
+    - pain behind the eyes
+    - altered sensorium
+    - chest pain
+    - excessive hunger
+    - yellowing of eyes
+    - cramps
+    - puffy face and eyes
+    - diarrhoea
+    - dehydration
+    - mucoid sputum
+    - skin rash
+    - brittle nails
+    - blister
+    - red spots over body
+    - pus filled pimples
+    - passage of gases
+    - pain during bowel movements
+    - swelling of stomach
+    - red sore around nose
+    - throat irritation
+    - spinning movements
+    - fatigue
+    - breathlessness
+    - acidity
+    - unsteadiness
+    - receiving blood transfusion
+    - weakness of one body side
+    - shivering
+    - neck pain
+    - family history
+    - sweating
+    - hip joint pain
+    - palpitations
+    - belly pain
+    - muscle pain
+    - high fever
+    - yellowish skin
+    - dizziness
+    - weight gain
+    - scurring
+    - stomach bleeding
+    - history of alcohol consumption
+    - obesity
+    - painful walking
+    - stomach pain
+    - fluid overload
+    - cold hands and feets
+    - bloody stool
+    - swollen legs
+    - small dents in nails
+    - muscle weakness
+    - headache
+    - nodal skin eruptions
+    - congestion
+    - rusty sputum
+    - irritability
+    - stiff neck
+    - foul smell ofurine
+    - irritation in anus
+    - redness of eyes
+    - swelling joints
+    - receiving unsterile injections
+    - mild fever
+    - weakness in limbs
+    - extra marital contacts
+    - loss of balance
+    - dischromic patches
+    - dark urine
+    - depression
+    - abdominal pain
